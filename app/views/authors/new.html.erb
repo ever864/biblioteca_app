@@ -1,2 +1,12 @@
-<h1>Authors#new</h1>
-<p>Find me in app/views/authors/new.html.erb</p>
+
+<h1>Crear nuevo autor</h1>
+
+<%= form_for @author, url: {action: "create"}, html: {class: "css_class"} do |autor| %>
+
+  <div>Name: <%= autor.text_field :name %></div>
+  <div>Nacionalidad: <%= autor.text_field :nationality %></div>
+  <div>Idioma: <%= autor.text_field :language %></div>
+  <div>Ganancia anual: <%= autor.text_field :annual_earnings %></div>
+  <div><%= autor.submit "Crear autor" %></div>
+
+<% end %>

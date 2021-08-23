@@ -1,9 +1,11 @@
+<%= link_to "Crear autor", action: 'new' %>
 <table>
   <thead>
        <tr>
         <th>Nombre</th>
         <th>Nacionalidad</th>
         <th>Idioma</th>
+        <th>Acciones</th>
        </tr>
   </thead>
   <tbody>
@@ -12,6 +14,7 @@
            <td><%= autor.name%></td>
            <td><%= autor.nationality%></td>
            <td><%= autor.language%></td>
+           <td><%= link_to "Show", action: "show", id: autor.id%></td>
        </tr>
        <% end %>
   </tbody>

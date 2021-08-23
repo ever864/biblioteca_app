@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get 'authors/index'
   get 'authors/show'
   get 'authors/new'
-  get 'authors/create'
+  post 'authors/create'
   get 'authors/edit'
   get 'authors/update'
   get 'authors/delete'
