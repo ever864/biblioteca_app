@@ -36,5 +36,11 @@ Rails.application.routes.draw do
   get 'authors/delete'
   get 'clients/index'
 
+  # authors#show
+  get 'authors/:id', to: 'authors#show'
+  get 'books/:id', to: 'books#show'
+  get 'categories/:id', to: 'categories#show'
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
