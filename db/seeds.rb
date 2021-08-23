@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+rnd = Random.new
+User.all.each do |usuario|
+age_aleatoria = rnd.rand(20..80)
+usuario.update(age: age_aleatoria)
+end
