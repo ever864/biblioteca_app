@@ -14,8 +14,11 @@
            <td><%= autor.name%></td>
            <td><%= autor.nationality%></td>
            <td><%= autor.language%></td>
-           <td><%= link_to "Show", action: "show", id: autor.id%></td>
+           <td><%= link_to "Show", action: "show", id: autor.id %></td>
+           <td><%= link_to "Edit", action: "edit", id: autor.id %></td>
+           <td><%= link_to "Borrar", {action: "delete", id: autor.id}, method: :delete, data: { confirm: '¿Quieres borrar este autor?'} %></td>
        </tr>
        <% end %>
   </tbody>
  </table>
+

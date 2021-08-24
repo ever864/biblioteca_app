@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>Autores</title>
+    <%= csrf_meta_tags %>
+     <%= csp_meta_tag %>
+      <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+         * {
+           padding: 0px;
+           margin: 0px;
+           box-sizing: border-box;
+         }
+         body {
+           font-family: Arial, Helveticasans-serif;
+         }
+        /* Style the header */
+         header {
+           background-color: #666;
+           padding: 30px;
+           text-align: center;
+           font-size: 35px;
+           color: white;
+         }
+         /* Create two columns/boxethat float  next to each othe*/
+         nav {
+           float: left;
+           width: 30%;
+           height: 300px; /* onl  fodemonstration, should bremoved */
+           background: #ccc;
+           padding: 20px;
+           }
+           /* Style the list inside thmenu */
+         nav ul {
+           list-style-type: none;
+           padding: 0;
+           }
+         article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px; /* only for demonstration, should be removed */
+            }
+         /* Clear floats after the columns */ section:after {
+                content: "";
+                display: table;
+                clear: both;
+                }
+         /* Style the footer */
+         footer {
+              background-color: #777;
+              padding: 10px;
+              text-align: center;
+              color: white;
+              }
+         /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+         @media (max-width: 600px) {
+                nav, article {
+                  width: 100%;
+                  height: auto;
+                }
+                     }
+         </style>
+         </head>
+         <body>
+         <header>
+         <h2>Autores</h2>
+         </header>
+         <section>
+         <nav>
+         <ul>
+           <li><a href="#">Ejemplo de link</a></li>
+           <li><a href="#">Ejemplo de link</a></li>          <li><a href="#">Ejemplo de link</a></li>
+         </ul>
+         </nav>
+         <article>
+              <%= yield %>
+         </article>
+         </section>
+         <footer>
+         <p>Footer</p>
+         </footer>
+         </body>
+         </html>

@@ -32,8 +32,8 @@ Rails.application.routes.draw do
   get 'authors/new'
   post 'authors/create'
   get 'authors/edit'
-  get 'authors/update'
-  get 'authors/delete'
+  patch 'authors/update'
+  delete 'authors/delete'
   get 'clients/index'
 
   # authors#show
